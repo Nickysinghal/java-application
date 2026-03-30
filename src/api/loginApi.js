@@ -1,14 +1,16 @@
 import axios from "axios";
 import api from "./api";
 
-const studentLogin = (email,pass) =>{
-    try{
-         const res = api.post("/student/login",{email,pass});
-         return res.data;
-    }
-   catch(error){
+async function studentLogin(id, email, pass) {
+  try {
+    // const res2 = axios.post("http://localhost:9090/student/login", { id, email, pass });
+    //OR
+    const res = api.post("/student/login", { id, email, pass });
+    // return res.data;
+    return "Login Successful";
+  } catch (error) {
     console.log(error);
-    
-   }
-    
+  }
 }
+
+export default studentLogin;
