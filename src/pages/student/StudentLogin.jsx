@@ -18,10 +18,10 @@ const StudentLogin = () => {
     if (res == "Login Successful") {
       //redirect to dashboard
       redirectTodashboard();
-
     } else {
       //show login error
       // redirectTodashboard();
+      console.log("failed");
     }
   }
   return (

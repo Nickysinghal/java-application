@@ -1,9 +1,11 @@
 import React from 'react'
 
-const StudentDashboard = () => {
+const StudentDashboard = ({student}) => {
   return (
     <div>
       student dash
+
+      Name = {student.name}
     </div>
   )
 }
